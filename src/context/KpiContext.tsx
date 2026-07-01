@@ -11,10 +11,23 @@ interface KpiContextType {
 }
 
 const mockDesigners = [
-  'Alice Johnson',
-  'Bob Smith',
-  'Charlie Davis',
-  'Diana Miller'
+  'Monica Gabriel',
+  'Natalie Ball',
+  'Marsha Diquez',
+  'Iris Lopes',
+  'Kat Baumgartner',
+  'Melissa Barker',
+  'Nicole Dugan',
+  'Tricia Hatton',
+  'Blerta Veseli',
+  'Lana Kravtchenko',
+  'Krisztina Vizi',
+  'Luana Tamagnone',
+  'Russell Reiner',
+  'Sarah Manev',
+  'Caryn Henslovitz',
+  'Michael Kaboskey',
+  'Malanie Dalfrey'
 ];
 
 const initialProjects: Project[] = [];
@@ -25,7 +38,7 @@ export const KpiProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [projects, setProjects] = useState<Project[]>(initialProjects);
 
   // Compute designers dynamically from mock list and current projects
-  const designers: Designer[] = mockDesigners.map(name => 
+  const designers: Designer[] = mockDesigners.map(name =>
     calculateDesignerStats(name, projects)
   );
 
